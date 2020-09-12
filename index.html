@@ -1,2 +1,99 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css" media="all">
+            #scena{
+                position: relative;
+                perspective: 1000px;
+                width: 200px;
+                height: 200px;
+                border: 1px solid #CCC;
+                margin: 180px;
+                
+            }
+            #kostka{
+                position: absolute;
+                transform-style: preserve-3d;
+                width: 100%;
+                height: 100%;
+                animation: obracaniekostki 7s infinite alternate;
+                
+                
+            }
+            .sciana{
+                position:absolute;
+                width: 100%;
+                height: 100%;
+                color: white;
+                font-size: 80px;
+                line-height: 200px;
+                text-align: center;
+                opacity: 0.6;
+            }
+            div.front{
+                background-color: red;
+                transform: translateZ(100px);
+                
+            }
+            div.back{
+                background-color: blue;
+                transform: rotateY(180deg) translateZ(100px);
+            }
+            div.left{
+                background-color: green;
+                transform:  rotateY(-90deg) translateZ(100px);
+            }
+            div.right{
+                background-color: yellow;
+                transform: rotateY(90deg) translateZ(100px);
+            }
+            div.top{
+                background-color: teal;
+                transform: rotateX(90deg) translateZ(100px);
+            }
+            div.bottom{
+                background-color: orange;
+                transform: rotateX(90deg) rotateY(180deg) translateZ(100px);
+            }
+            @keyframes obracaniekostki{
+                from
+                {
+                    
+                }
+                to
+                {
+                   transform: rotateX(360deg) rotateY(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="scena">
+            <div id="kostka">
+                <div class="sciana front">
+                    1
+                </div>
+                <div class="sciana back">
+                    2
+                </div>
+                <div class="sciana left">
+                    3
+                </div>
+                <div class="sciana right">
+                    4
+                </div>
+                <div class="sciana top">
+                    5
+                </div>
+                <div class="sciana bottom">
+                    6
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
